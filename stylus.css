@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    /* Cores baseadas no documento de identidade visual do Senai. */
+    --vermelho: #e30613;
+    --branco: #ffff;
+    --preto: #000000;
+    --cinza: #878787;
+
+    --sombra-padrao: rgba(0, 0, 0, 0.16) 0px 1px 6px;
+
+    /* Tamanho dos Botões de ícones no header */
+
+    --header-icon-size: 36px;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+
+}
+.container{
+    width: 680px;
+}
+.entryarea{
+    position: relative;
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+
+}
+input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    outline: none;
+    font-size: 2.2em;
+    padding: 0 30px;
+    line-height: 80px;
+    border: 2px solid;
+    border-color: var(--vermelho);
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+
+}
+.labelline{
+    position: absolute;
+    font-size: 1.6em;
+    color: var(--vermelho);
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: var(--branco);
+    transition: 0.2s ease;
+}
+input:focus,
+input:valid{
+    color: var(--preto);
+    border: 3px solid var(--vermelho);
+}
+input:focus + .labelline,
+input:valid + .labelline{
+    color: var(--vermelho);
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-15px,-16px) scale(0.88);
+    z-index: 1111;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    accent-color: var(--vermelho);
+}
+
+
+
+fieldset{
+    width: 50px;
+    border: solid var(--vermelho);
+    color: var(--vermelho);
+    background-color: white;
+}
+button{
+    width: 100px;
+    height: 90px;
+    background: transparent;
+    border: hidden;
+}
+button:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+button:active{
+    scale: 0.9;
+    transition: 0.2s;
+}
+i{
+    font-size: 60px;
+    color: var(--vermelho);
+}
